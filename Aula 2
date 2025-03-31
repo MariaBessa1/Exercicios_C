@@ -1,0 +1,38 @@
+
+#include<stdio.h>
+
+int main()
+{
+  //Exercícios Aula 2
+  
+//exercício 1
+ //Escreva um programa que exibe a mensagem: Bom dia! Estou aprendendo a programar Definitivamente não é "muito" difícil
+ printf("Bom dia! Estou aprendendo a programar. Definitivamente não é \"muito\" difícil\n");
+ 
+ printf ("---------------------------------\n");
+ 
+ //exercício 2
+ //Escreva um programa que exibe na tela a seguinte mensagem: Suas notas são ___ e ____ e sua média é ____
+ float nota1;
+ float nota2;
+ printf ("Coloque suas notas a seguir:");
+ scanf ("%f", &nota1);
+ scanf ("%f", &nota2);
+ printf ("Suas notas são %.2f e %.2f e sua média é %.2f \n",
+ nota1, nota2, (nota1+nota2)/2);
+ 
+ printf ("---------------------------------\n");
+ 
+//Exercício 3 
+ //Escreva um programa que realiza este cálculo e exibe o valor correto com a mensagem na tela: Vamos distribuir 359 carros para 4 pessoas e portanto devem sobrar ___ carros.
+ printf("Vamos distribuir 359 carros para 4 pessoas e portanto devem sobrar %d carros\n" , 359 % 4 );
+  
+ printf ("---------------------------------\n");
+//Exercício 4
+ //Exiba as seguintes mensagens na tela, fazendo os cálculos necessários pelo programa: Eu tenho um círculo de raio 5. Portanto o diâmetro é ___ A área é ___ E a medida da circunferência é ___
+printf ("Eu tenho um círculo de raio 5. Portanto o diâmetro é %d", 5*2);
+printf (", a área é %.2f", 3.14*(5*5));
+printf (" e a medida da circunferência é %.2f", 2*(3.14*(5*5)) );
+
+  return 0;
+}
