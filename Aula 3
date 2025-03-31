@@ -1,0 +1,104 @@
+
+#include<stdio.h>
+
+int main()
+{
+  //Exercícios Aula 3
+
+//Exercício 1
+//Escreva um programa que ajuda os alunos a calcularem as notas desta disciplina. O programa deve perguntar as notas da primeira e da segunda prova, calcular a média aritmética entre elas, e exibir na tela.
+float n1;
+float n2;
+printf("Digite sua primeira nota:");
+  scanf("%f" , &n1);
+printf("Digite sua segunda nota:");
+  scanf("%f" , &n2);
+printf("Com suas notas, sua média é de: %.2f\n" , (n1+n2)/2);
+
+  printf("---------------------\n");
+  
+//Exercício 2
+//Escreva um algoritmo para calcular o consumo médio de um automóvel (medido em km/l), dado que são conhecidos a distância total percorrida e o volume de combustível consumido para percorrê-la (medido em litros).
+float distancia;
+float litros; 
+printf("Qual foi a distância percorrida em km?");
+scanf("%f" , &distancia);
+printf("Qual foi o volume de combustivel consumido?");
+scanf("%f" , &litros);
+printf("O consumo médio do seu automóvel, em km/l, é de %.2f.\n" , distancia/litros);
+
+   printf("---------------------\n");
+
+//Exercício 3
+//Em uma festa, homens pagam 20 reais de entrada e as mulheres pagam 17. Crie um programa que pergunta quantos homens e quantas mulheres participaram da festa e calcula o valor total arrecadado com as entradas.
+int homens;
+int mulheres;
+int dh = 20;
+int dm = 17;
+printf("Quantas mulheres compareceram a festa?");
+  scanf("%d" , &mulheres);
+printf("Quantos homens compareceram a festa?");
+  scanf("%d" , &homens);
+printf("Com essas informações, o valor total arrecadado foi de R$%d\n" , (mulheres*dm)+(homens*dh));
+
+   printf("---------------------\n");
+
+//Exercício 4
+//Crie um programa que calcula o volume de um cilindro, solicitando que o usuário digite apenas a medida do raio e a altura do mesmo.
+int raio;
+int altura;
+printf("Vamos calcular o volume de um cilindro! Para isso, primeiramente digite o seu raio:");
+scanf("%d" , &raio);
+printf("Agora, digite sua altura:");
+scanf("%d" , &altura);
+printf("Com essas informações, o volume do cilindro será de %.2f\n" , 3.14*(raio*raio)*altura );
+
+  printf("---------------------\n");
+//Exercício 5
+//Fazer um algoritmo para ler os valores dos coeficientes A, B e C de uma equação quadrática. Calcular e imprimir o valor do discriminante (delta). Delta = B²– 4AC.2
+int a;
+int b;
+int c;
+printf("Esse algorítimo foi feito para calcular o Delta de uma equação. Para isso, digite primeiramente o valor de a:");
+scanf("%d" , &a);
+printf("Agora digite o valor de b:");
+scanf("%d" , &b);
+printf("O valor de c:");
+scanf("%d" , &c);
+printf("O valor do Delta é %d.\n" , (b*b)-(4*a*c*2));
+
+  printf("---------------------\n");
+//Exercício 6
+//Escreva um programa que solicita um número e então exibe 0 se o número for par, e 1 se o número for ímpar. (Não utilize o comando IF ainda). 
+int numero;
+printf("Escreva um número. Irei exibir 0 se ele for par e 1 se for ímpar.");
+scanf("%d" , &numero);
+printf (" = %d.\n" , numero%2);
+
+   printf("---------------------\n");
+  
+//Exercício 7
+//Peça ao usuário para digitar uma temperatura em graus Celsius e, em seguida, exiba a temperatura equivalente em graus Fahrenheit.
+printf("Conversor de Celsius para Fahrenheit:\n");
+float celcius;
+printf("Insira a temperatura em Celcius");
+scanf("%f" , &celcius);
+printf("A temperatura equivalente em Fahrenheit é %.2f\n" , (celcius*1.8)+32);
+
+  printf("---------------------\n");
+
+//Exercício 8
+//Peça ao usuário para digitar três números float e, em seguida, calcule e exiba a média aritmética desses números.
+float num1;
+float num2;
+float num3;
+printf("Insira três números quebrados para calcular a média entre eles:");
+scanf("%f", &num1);
+scanf("%f", &num2);
+scanf("%f", &num3);
+printf("A média desses números é %.2f\n" , (num1+num2+num3)/3);
+
+   printf("---------------------\n");
+
+  return 0;
+}
