@@ -1,0 +1,164 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+int main()
+{
+//1 - Sorteie um número de 1 a 100, exiba na tela e informe se é um número par ou ímpar.
+srand (time(NULL));
+int numSorteio = rand () % 100 + 1;
+printf("O número sorteado foi %d", numSorteio);
+if (numSorteio%2==0) {
+    printf(", ele é par.\n");
+}
+else {
+    printf(", ele é impar.\n");
+}
+
+printf ("-----------------------------\n");
+
+//2 - Sorteie 3 números de 1 a 10, e aplique todas as coisas que fizemos com o programa sobre triângulos da lista passada, verificando se forma um triângulo e classificando o mesmo.
+
+srand (time(NULL));
+int n1, n2, n3;
+
+n1 = rand() % 10 + 1;
+n2 = rand() % 10 + 1;
+n3 = rand() % 10 + 1;
+printf("Os números sorteados foram %d, %d e %d.", n1, n2, n3);
+if (n1<n2+n3 && n2<n1+n3 && n3<n1+n2) {
+    printf (" Com eles, é possível formar um triângulo.");
+    if (n1==n2 && n2==n3) {
+        printf (" Ele é Equilátero.");
+    }
+    if (n1==n2 || n2==n3 || n1==n3) {
+        printf (" Ele é Isósceles.");
+    }
+    else {
+        printf (" Ele é Escaleno.");
+    }
+    if (n1*n1==n2*n2+n3*n3 || n2*n2==n1*n1+n3*n3 || n3*n3==n2*n2+n1*n1) {
+        printf (" E também Retângulo.");
+    }
+}
+else{
+    printf (" Com eles, não é possível formar um triângulo.");
+}
+
+printf ("\n-----------------------------\n");
+
+//3 - Escreva um programa que sorteia um número de 1 a 10 e dá duas chances para que o usuário acerte. O programa não deve alterar o número sorteado, e só deve pedir o segundo palpite, caso a pessoa erre sua primeira tentativa.
+srand(time(NULL));
+int nSorteado = rand() % 10 + 1;
+int chutesUsuario;
+
+printf ("Foi sorteado um número de 1 a 10. Chute qual foi:");
+scanf ("%d", &chutesUsuario);
+if (chutesUsuario==nSorteado) {
+    printf("Parabéns, você acertou!!\n");
+}
+else {
+    printf("Errou, mas tente novamente:");
+    scanf ("%d", &chutesUsuario);
+    if (chutesUsuario==nSorteado) {
+        printf ("Parabéns, você acertou!!\n");
+    }
+    else {
+        printf ("Você errou. O número era %d \n", nSorteado);
+    }
+}
+
+printf ("\n-----------------------------\n");
+
+//4 - Escreva um programa que sorteia um número de 1 a 10, dá duas chances para que o usuário acerte, mas dá uma pista após a primeira tentativa, dizendo se o número sorteado é maior ou menor que o primeiro palpite.
+srand(time(NULL));
+
+int numeroSorteado = rand() % 10 + 1;
+int palpite;
+
+printf ("Foi sorteado um número de 1 a 10. Chute qual foi:");
+scanf ("%d", &palpite);
+if (palpite==numeroSorteado) {
+    printf ("Parabéns, você acertou!\n");
+}
+else {
+    if (numeroSorteado>palpite) {
+        printf ("Você errou, tente um número maior:");
+    }
+    else {
+        printf ("Você errou, tente um número menor:");
+    }
+    scanf ("%d", &palpite);
+    if (palpite==numeroSorteado) {
+        printf ("Você acertou, parabéns!!\n");
+    }
+    else {
+        printf ("Você errou. O número era %d \n", numeroSorteado);
+    }
+}
+
+printf ("\n-----------------------------\n");
+
+//5 - Sorteie dois números de 1 a 5 e peça que o usuário acerte os dois números de uma vez, não necessariamente na mesma ordem.
+srand (time(NULL));
+
+int num1 = rand() % 5 + 1;
+int num2 = rand() % 5 + 1;
+int chute1, chute2;
+
+printf ("Dois números de 1 a 5 foram sorteados. Chute quais foram:");
+scanf ("%d %d", &chute1, &chute2);
+
+if ((chute1&&chute2)==(num1&&num2)){
+    printf ("Caraca, você acertou os dois!\n");
+}
+else {
+    printf ("Você errou. Os números eram %d e %d \n", num1, num2);
+}
+
+printf ("\n-----------------------------\n");
+
+//6 - Sorteie dois números de 1 a 10. Informe quantos destes números estão entre 3 e 7 (inclusive).
+srand (time(NULL));
+
+int numero1 = rand() % 10 + 1;
+int numero2 = rand() % 10 + 1;
+int cont=0;
+
+if (numero1>=3 && numero1 <=7) {
+    cont = cont + 1;
+}
+if (numero2>=3 && numero2 <=7) {
+    cont = cont + 1;
+}
+printf("Dois números de 1 a 10 foram sorteados, sendo eles %d e %d.", numero1, numero2);
+printf(" %d deles está entre 3 e 7.\n", cont);
+
+printf ("\n-----------------------------\n");
+
+// 7 - Escreva um programa que joga par ou ímpar com o usuário. Ele deve começar perguntando se o usuário escolhe 1 - Par ou 2 - Ímpar. (A escolha é informada digitando 1 ou 2).
+srand (time(NULL));
+
+int dedosCPU = rand() % 5 + 1;
+int dedosHumano, palpitePI, soma, resto;
+
+printf ("Vamos fazer um jogo de par ou ímpar. Digite 1 ou 2 para escolher entre par (1) e ímpar (2)");
+scanf ("%d", &palpitePI);
+
+printf ("Coloque um número de 1 a 5 (seus dedos):");
+scanf ("%d", &dedosHumano);
+
+soma = dedosHumano + dedosCPU;
+resto = soma%2;
+
+if (palpitePI==1 && resto==0 || palpitePI==2 && resto==1) {
+    printf ("Você venceu!! O computador jogou %d", dedosCPU);
+}
+else {
+    printf ("O computador venceu!!! Ele jogou %d", dedosCPU);
+}
+
+printf ("\n-----------------------------\n");
+
+return 0;
+}
