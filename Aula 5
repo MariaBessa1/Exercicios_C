@@ -78,7 +78,7 @@ else {
 }
  
 //6 -Incremente o exercício anterior, agora informando se este é também um triângulo retângulo.
- 
+
 printf ("Digite um primeiro valor:");
 scanf("%d", &valor1);
 printf ("Digite um segundo valor:");
@@ -95,10 +95,10 @@ if(valor1<valor2+valor3 && valor2<valor1+valor3 && valor3<valor1+valor2){
         printf(" Ele é isósceles.\n");
     }
     else {
-        printf (" Ele é Escaleno.");
-        if (valor1*valor1==valor2*valor2+valor3*valor3 || valor2*valor2==valor1*valor1+valor3*valor3 || valor3*valor3==valor2*valor2+valor1*valor1){
-            printf (" E também retângulo.\n");
-        }
+        printf (" Ele é Escaleno.\n");
+    }
+    if (valor1*valor1==valor2*valor2+valor3*valor3 || valor2*valor2==valor1*valor1+valor3*valor3 || valor3*valor3==valor2*valor2+valor1*valor1){
+    printf (" E também retângulo.\n");
     }
 }
 else {
@@ -108,5 +108,17 @@ else {
 printf ("---------------------------------\n");
 
 //7 - Crie um programa que desafia o usuário digitar um número maior que 40, que seja múltiplo de 5 e 7. Se ele conseguir, deve receber uma mensagem de parabéns.
-  return 0;
+  
+int numeroUsuario;
+ 
+printf ("Digite a seguir um número maior que 40, multiplo de 5 e 7 ao mesmo tempo. Duvido!!");
+scanf ("%d", &numeroUsuario);
+if (numeroUsuario>40 && numeroUsuario%5==0 && numeroUsuario%7==0) {
+    printf("Wow, você conseguiu, parabéns!!");
+}
+else {
+    printf ("Errou");
+}
+
+return 0;
 }
