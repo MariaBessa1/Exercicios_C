@@ -1,0 +1,76 @@
+
+#include<stdio.h>
+
+int main()
+{
+   //1 - Escreva um programa que exibe qualquer tabuada completa. O programa deve perguntar ao usuário qual tabuada ele deseja visualizar, que irá responder digitando um número de 1 a 10.
+   
+   int valorMultiplicado;
+   int contagem = 1;
+   
+   printf("Digite um valor que quer saber a tabuada:");
+   scanf ("%d", &valorMultiplicado);
+  
+   while (contagem<=10){
+        printf("%d x %d = %d\n", valorMultiplicado, contagem, valorMultiplicado*contagem);
+        contagem++;
+   }
+   
+   printf ("----------------------------\n");
+   
+   //2 - Escreva um programa que exibe o quadrado de todos os números de 1 a 20.
+   //Ex: 1 - 1 2 - 4 3 - 9 4 - 16 ... 20 - 400
+
+   int cont = 1;
+  
+   while (cont<=20) {
+       printf("%d - %d /", cont, cont*cont);
+       cont++;
+   }
+   
+   printf ("\n----------------------------\n");
+   
+   //3 - Escreva um programa que solicita 5 números ao usuário, e para cada número digitado, informa se este é par ou ímpar.
+   
+   int numUsuario;
+   int contagem2 = 1;
+   
+   printf ("Este é um programa que informa se o número é par ou ímpar.\n");
+   
+   while (contagem2 <= 5) {
+       printf ("Escreva um número:");
+       scanf ("%d", &numUsuario);
+       if (numUsuario%2==0) {
+           printf ("É par.\n");
+       }
+       else {
+           printf ("É ímpar.\n");
+       }
+       contagem2++;
+   }
+   
+   printf ("\n----------------------------\n");
+   
+   //4 - Escreva um programa que solicita 10 números e ao final exibe a soma de todos eles.
+   
+   int total = 0;
+   int numeros;
+   int contagem3 = 1;
+    
+    printf ("A seguir, você irá digitar 10 números\n");
+    
+    while (contagem3 <= 10) {
+        printf ("Digite um número:\n");
+        scanf ("%d", &numeros);
+        contagem3++;
+        total = numeros + numeros;
+    }
+   
+  printf ("%d", total);
+ 
+   
+   
+   
+   
+    return 0;
+}
