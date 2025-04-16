@@ -63,7 +63,7 @@ int main()
         printf ("Digite um número:\n");
         scanf ("%d", &numeros);
         contagem3++;
-        total = numeros + numeros;
+        total = total + numeros;
     }
    
   printf ("%d", total);
